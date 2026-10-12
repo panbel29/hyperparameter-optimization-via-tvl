@@ -23,7 +23,7 @@ The study is run on two pipelines.
 | TvL cardinality *m* | multiple values |
 | Validation | 5-fold cross-validation |
 
-### CNN pipeline (case study)
+### CNN pipeline (image classification study)
 
 | Component | Values |
 |---|---|
