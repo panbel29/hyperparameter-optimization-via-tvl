@@ -62,19 +62,21 @@ For the tabular pipeline, Friedman tests with Nemenyi post-hoc analysis and Crit
 ```
 .
 ├── tabular/              # Tabular pipeline: preprocessing, tuning, evaluation
+│   ├── svm_tune.py      # CGS / RS / BO tuning with accuracy and TvL for SVM
+│   ├── knn_tune.py      # RS / BO tuning with accuracy and TvL for KNN
+│   ├── mlp_tune.py      # CGS / RS / BO tuning with accuracy and TvL for MLP
+│   └── rf_tune.py       # CGS / RS / BO tuning with accuracy and TvL for Random Forest
+│   └── main.py          # main implementation
 ├── cnn/
 │   ├── cnn_model.py      # CNN architectures
 │   ├── cnn_data.py       # Data loading for MNIST / Fashion-MNIST / CIFAR-10
 │   ├── cnn_train.py      # Training loop
 │   ├── cnn_tune.py       # RS / BO / Nelder-Mead tuning with accuracy and TvL
 │   └── cnn_main.py       # Entry point
+│   └── cnn_analysis.py   # CNN analysis: heatmaps, line plots, learning curves
+├── tvl_scorer1.py        # TvL pipeline (talent -> superset S -> talent adequacy -> TvL computation)
 ├── analysis.py           # Tabular analysis: plots, Friedman/Nemenyi, CD diagrams
-├── cnn_analysis.py       # CNN analysis: heatmaps, line plots, learning curves
 ├── parallel_runner1.py   # Parallel execution of experiment configurations
-├── check_results.py      # Completeness check of experiment outputs
-├── slurm/                # SLURM job scripts
-├── results/              # Final result tables (CSV)
-├── requirements.txt
 └── README.md
 ```
 
